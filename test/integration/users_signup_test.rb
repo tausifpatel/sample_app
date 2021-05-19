@@ -35,5 +35,6 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     follow_redirect!
     assert_template "users/show"
     assert_not flash.empty? 
+    assert is_logged_in?  #checking if user logged in right after signing up. the method is defined in helper test.
   end 
 end
